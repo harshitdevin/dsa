@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int convert(int num1){
+    int base=1,rem,sum=0;
+    while(num1!=0){
+        rem=num1%10;
+        sum+=rem*base;
+        base*=2;
+        num1/=10;
+    
+    }
+    if(sum<10){
+        printf("%d",sum);
+    }    
+    if(sum==10){
+        printf("A");
+        return 0;
+    }
+    if(sum==11){
+        printf("B");
+        return 0;
+    }
+    if(sum==12){
+        printf("C");
+        return 0;
+    }
+    if(sum==13){
+        printf("D");
+        return 0;
+    }
+    if(sum==14){
+        printf("E");
+        return 0;
+    }
+    if(sum==15){
+        printf("F");
+        return 0;
+    }
+    
+   
+}
+int main() {
+	int num,oct=0,place=1;
+	scanf("%d",&num);
+	while(num!=0){
+	    int rem=0;
+	    rem=num%10000;
+	    num=num/10000;
+	    convert(rem);
+	    
+	}
+}
