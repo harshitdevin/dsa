@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int convert(int num1){
+    int base=1,rem,sum=0;
+    while(num1!=0){
+        rem=num1%10;
+        sum+=rem*base;
+        base*=2;
+        num1/=10;
+        
+    }
+    return sum;
+   
+}
+int main() {
+	int num,oct=0,place=1;
+	scanf("%d",&num);
+	while(num!=0){
+	    int rem=0;
+	    rem=num%1000;
+	    num=num/1000;
+	    int val= convert(rem);
+	    oct+=val*place;
+	    place*=10;
+	}
+	printf("%d",oct);
+}
