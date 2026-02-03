@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    int num ;
+    scanf("%d",&num);
+    int rem=0;
+    int multi=1;
+    int value=0;
+    while(num!=0){
+        rem=num%10;
+        value=value+rem*multi;
+        multi=multi*8;
+        num=num/10;
+    }
+    
+    printf("%d",value);
+}
