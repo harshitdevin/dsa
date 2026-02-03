@@ -1,0 +1,36 @@
+#include<stdio.h>          //octal--hexadecimal
+int main(){
+    int num ;
+    scanf("%d",&num);
+    int rem=0;
+    int multi=1;
+    int value=0;
+    while(num!=0){
+        rem=num%10;      //octal to decima
+        
+        value=value+rem*multi;
+        multi=multi*8;
+        num=num/10;
+    }
+    int rem1=0;
+    int val=0;
+    int place=1;
+    while(value!=0){
+        rem1=value%2;
+        val=val+rem1*place;
+        place*=10;
+        value/=2;
+        
+    }
+    int pair=0 ;
+    int arr[20];
+    int i=0;
+    while(val!=0){
+        pair=val%10000;
+        arr[i]=pair;
+        pair=0;
+        val/=10000;
+        i++;
+    }
+    
+}
