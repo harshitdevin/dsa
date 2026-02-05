@@ -1,6 +1,0 @@
-//Wild pointer(unintilized pointer)
-//void(any memory location)
-//null(intitzed with null value)
-//constant(cant change after intitzed)
-//dagling(pointed to deleted value)
-//scale factor(length of data type)

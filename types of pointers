@@ -1,0 +1,27 @@
+//Wild pointer(unintilized pointer)
+//void(any memory location) aka generic
+//null(intitzed with null value)
+//constant(cant change after intitzed)
+//dagling(pointed to deleted value)
+//scale factor(length of data type)
+
+
+//DMA 
+// malloc()
+syntax 
+    void* malloc(int size)
+    int  *p1=(int*)malloc(sizeof(int));  //allocate single block
+                                        //p1 stack
+                                        //p1* heap
+//calloc()
+syntax
+     void* calloc(int no_of_blocks,int size_of_each_block) ;     multiple partition
+
+//realloc()
+syntax
+  void* realloc(pointer,int_new_sizw);
+
+//free()
+syntaz
+   free(pointer);
+
