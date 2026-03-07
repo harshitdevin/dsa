@@ -1,0 +1,52 @@
+#include<stdio.h>
+#define max 100
+int top=-1;
+int stack[max];
+
+void push(int data){
+    if(top==max-1){
+        printf(" stack overflow\n",data);
+        return;
+    }
+    else{
+        
+        stack[++top]=data;
+        printf("value entered: %d\n");
+        return;
+    }
+}
+void pop(){
+    if(top==-1){
+        printf("stack underflow\n");
+        return;
+    }
+    else{
+        int a=stack[top];
+        top--;
+        printf("value popped: %d \n",a);
+        return;
+    }
+}
+void peek(){
+    if(top==-1){
+        printf("stack underflow\n");
+        return;
+    }
+    else{
+        int a=stack[top];
+        printf("peeked value: %d \n",a);
+        return;
+    }
+    
+}
+int main() {
+    int data;
+    printf("enter data\n");
+    scanf("%d",&data);
+    push(data);
+    peek();
+    pop();
+    peek();
+
+    return 0;
+}
